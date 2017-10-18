@@ -1,42 +1,830 @@
-@import (less) 'node_modules/normalize.css/normalize.css';
-@import (less) './media';
+@import 'media';
 
-// Код для примера
-body {
-    background: #ccc;
-}
-
-.menu {
+body{
     margin: 0;
-    padding: 0;
-    text-align: center;
-    background: red; // red on small devices
+    background: white;
+    font-family: Roboto, sans-serif;
+}
 
-    @media @tablet {
-        background: green; // green on medium devices
+.header{
+    display: inline-flex;
+    align-items: center;
+    color: #C00;
+    font-size: 20px;
+    padding: 10px 0;
+
+    &_logo-name{
+        margin-left: 155px;
     }
 
-    @media @desktop {
-        background: blue; // blue on large devices
+    &_logo{
+        margin-left: 570px;
     }
 
-    &__item {
-        display: inline-block;
-        list-style-type: none;
-    }
-
-    &__link {
-        color: #FFF;
-    }
-
-    // Bottom Menu
-    &_bottom { // BEM modifier example
-        background: green;
-    }
-
-    &_bottom &__link {
-        color: #f00;
+    &_number{
+        display: inline-flex;
+        margin-left: 375px;
     }
 }
 
 
+.menu{
+    display: flex;
+    height: 51px;
+    background-color: #f2f2ed;
+    font-size: 17px;
+    padding-left: 104px;
+    border: 1px solid #d9d9d4;
+
+    &_link{
+        color: #c00;
+    }
+
+    li{
+        list-style: none;
+        display: inline;
+        margin-left: 19px;
+        color: #000;
+    }
+
+    &_search{
+        width: 282px;
+        height: 40px;
+        border: 1px solid #d9d9d4;
+        background-color: #fff;
+        margin-left: 640px;
+        margin-top: 6px;
+    }
+}
+
+a:-webkit-any-link{
+    color: #c00;
+}
+
+.submenu{
+    margin-top: 68px;
+    margin-left: 115px;
+
+    &_list li{
+        list-style: none;
+        display: inline;
+        margin-left: 3px;
+        color: #000;
+    }
+}
+
+.product{
+    flex-direction: row;
+    display: flex;
+    margin-left: 158px;
+    margin-top: 19px;
+
+    &_photo {
+        & img {
+            height: 698px;
+            width: 698px;
+        }
+    }
+
+    &_name{
+        margin-left: 60px;
+    }
+
+    h1{
+        margin-top: 0;
+    }
+
+    &_price{
+        width: 104px;
+        height: 27px;
+        color: #c00;
+        padding-top: 32px;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    &_size{
+        height: 16px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 93px;
+    }
+
+    &_format{
+        width: 69px;
+        height: 68px;
+        border: 1px solid #000;
+        background-color: #fff;
+        font-size: 36px;
+        margin-top: 50px;
+    }
+
+    &_color{
+        margin-top: 32px;
+        margin-bottom: 12px;
+    }
+
+    &_white{
+        width: 69px;
+        height: 69px;
+        border: 1px solid #000;
+        background-color: #fffafb;
+    }
+
+    &_yellow{
+        width: 69px;
+        height: 69px;
+        border: 1px solid #000;
+        background-color: #e3d95e;
+    }
+
+    &_green{
+        width: 69px;
+        height: 69px;
+        border: 1px solid #000;
+        background-color: #a5af96;
+    }
+
+    &_buy {
+        width: 202px;
+        height: 79px;
+        background-color: #c00;
+        color: #fffafb;
+        border: 0;
+        font-size: 36px;
+        margin-top: 42px;
+    }
+
+    &_basket-img
+    {
+        height: 28px;
+        width: 25px;
+    }
+
+    &_basket{
+        display: flex;
+        margin-top: 44px;
+
+        & a{
+            margin-left: 6px;
+            color: #999;
+        }
+    }
+}
+
+.footer{
+    background-color: #f2f2ed;
+    margin-top: 121px;
+    padding-top: 62px;
+    padding-left: 155px;
+    padding-right: 80px;
+}
+
+.information{
+    display: flex;
+
+    &_server-help{
+        display: flex;
+        margin-bottom: 64px;
+    }
+
+    &_part{
+        margin-bottom: 24px;
+    }
+
+    &_part-two{
+        margin-top: 49px;
+        margin-left: 20px;
+    }
+
+    &_company{
+        display: flex;
+        margin-left: 30px;
+    }
+
+    &_company-two{
+        margin-left: 40px;
+        margin-top: 49px;
+    }
+
+    &_advantages{
+        display: flex;
+        margin-top: 40px;
+        margin-left: 120px;
+    }
+
+    &_text{
+        margin-top: 0;
+        margin-left: 10px;
+    }
+
+    &_features{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_heart{
+        display: flex;
+        margin-top: 15px;
+        margin-left: 140px;
+    }
+
+    &_stock{
+        display: flex;
+        margin-top: 15px;
+        margin-left: 140px;
+    }
+
+    & a{
+        color: #000;
+        text-decoration: none;
+    }
+
+    &_footer{
+        padding: 32px 0 104px;
+    }
+
+    &_link{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 35px;
+        margin-bottom: 90px;
+        margin-left: 30px;
+    }
+}
+
+hr{
+    height: 1px;
+    background-color: #d9d9d4;
+}
+
+@media @phone-strict {
+    .header{
+        padding: 10px 0;
+
+        &_logo-name{
+            margin-left: 20px;
+        }
+
+        &_logo{
+            margin-left: 20px;
+        }
+
+        &_number{
+            margin-left: 20px;
+        }
+    }
+
+    .menu {
+        height: 65px;
+        font-size: 15px;
+        padding-left: 0;
+
+        li{
+            list-style: none;
+            display: inline;
+        }
+
+        &_search{
+            display: none;
+        }
+    }
+
+    .submenu {
+        margin-top: 20px;
+        margin-left: 20px;
+
+        &_list li {
+            list-style: none;
+            display: inline;
+            margin-left: 3px;
+        }
+    }
+
+    .product {
+        margin-left: 35px;
+        flex-direction: column;
+        display: flex;
+        margin-top: 20px;
+
+        &_photo {
+            & img {
+                height: 256px;
+                width: 256px;
+            }
+        }
+
+        &_name{
+            margin-left: 0;
+        }
+
+        h1{
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        &_price{
+            padding-top: 5px;
+            margin-bottom: 0;
+            font-size: 24px;
+        }
+
+        &_size{
+            font-size: 16px;
+        }
+
+        & p{
+            font-size: 14px;
+        }
+
+        &_format{
+            width: 38px;
+            height: 38px;
+            font-size: 30px;
+            margin-top: 50px;
+        }
+
+        &_color{
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        &_white{
+            width: 38px;
+            height: 38px;
+        }
+
+        &_yellow{
+            width: 38px;
+            height: 38px;
+        }
+
+        &_green{
+            width: 38px;
+            height: 38px;
+        }
+
+        &_buy {
+            width: 150px;
+            height: 50px;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        &_basket{
+            display: flex;
+            margin-top: 20px;
+
+            & a{
+                margin-left: 6px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    .footer{
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .information{
+        display: flex;
+        flex-direction: column;
+
+        &_server-help{
+            margin-bottom: 20px;
+        }
+
+        &_part{
+            margin-bottom: 24px;
+        }
+
+        &_part-two{
+            margin-top: 80px;
+            margin-left: 20px;
+        }
+
+        &_company{
+            margin-left: 0;
+        }
+
+        &_company-two{
+            margin-left: 40px;
+            margin-top: 49px;
+        }
+
+        &_advantages{
+            margin-top: 20px;
+            margin-left: 0;
+        }
+
+        &_facebook{
+            margin-left: 10px;
+        }
+
+        &_heart{
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        &_stock{
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+
+        &_twitter{
+            margin-left: 10px;
+        }
+
+        &_instagram{
+            margin-left: 10px;
+        }
+
+        &_footer{
+            padding: 20px 0 60px;
+        }
+
+        &_text{
+
+        }
+    }
+}
+@media @tablet-strict {
+    .header{
+        padding: 10px 0;
+
+        &_logo-name{
+            margin-left: 40px;
+        }
+
+        &_logo{
+            margin-left: 220px;
+        }
+
+        &_number{
+            margin-left: 135px;
+            margin-right: 40px;
+        }
+    }
+
+    .menu {
+        height: 65px;
+        font-size: 15px;
+        padding-left: 0;
+
+
+        & ul{
+            padding-left: 0;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        li{
+            margin-top: 15px;
+        }
+
+        &_search{
+            width: 282px;
+            height: 40px;
+            margin-left: 110px;
+            margin-top: 11px;
+            margin-right: 20px;
+        }
+    }
+
+    .submenu {
+        margin-top: 30px;
+        margin-left: 0;
+
+        &_list li {
+            list-style: none;
+            display: inline;
+            margin-left: 3px;
+        }
+    }
+
+    .product {
+        margin-left: 40px;
+        margin-top: 30px;
+
+        &_photo {
+            & img {
+                height: 356px;
+                width: 356px;
+            }
+        }
+
+        &_name{
+            margin-left: 40px;
+        }
+
+        h1{
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 20px;
+        }
+
+        &_price{
+            padding-top: 5px;
+            font-size: 24px;
+            width: 0;
+            height: 0;
+        }
+
+        &_size{
+            font-size: 16px;
+        }
+
+        & p{
+            font-size: 14px;
+        }
+
+        &_format{
+            width: 38px;
+            height: 38px;
+            font-size: 30px;
+            margin-top: 50px;
+        }
+
+        &_color{
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        &_white{
+            width: 38px;
+            height: 38px;
+        }
+
+        &_yellow{
+            width: 38px;
+            height: 38px;
+        }
+
+        &_green{
+            width: 38px;
+            height: 38px;
+        }
+
+        &_buy {
+            width: 140px;
+            height: 40px;
+            font-size: 25px;
+            margin-top: 20px;
+        }
+
+        &_basket-img
+        {
+            height: 18px;
+            width: 15px;
+        }
+
+        &_basket{
+            margin-top: 20px;
+
+            & a{
+                margin-left: 6px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .footer{
+        margin-top: 20px;
+        padding-top: 10px;
+        padding-left: 50px;
+        padding-right: 20px;
+    }
+
+    .information{
+        flex-direction: column;
+
+
+        & h3{
+            font-size: 20px;
+        }
+
+        & p{
+            font-size: 15px;
+        }
+
+        &_server-help{
+            margin-bottom: 20px;
+        }
+
+        &_part{
+            margin-bottom: 24px;
+        }
+
+        &_part-two{
+            margin-top: 56px;
+            margin-left: 100px;
+        }
+
+        &_company{
+            margin-left: 0;
+        }
+
+        &_company-two{
+            margin-left: 180px;
+            margin-top: 58px;
+        }
+
+        &_advantages{
+            margin-top: 40px;
+            margin-left: 10px;
+        }
+
+        &_facebook{
+            margin-left: 210px;
+            margin-right: 40px;
+        }
+
+        &_heart{
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        &_stock{
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+
+        &_twitter{
+            margin-left: 140px;
+            margin-right: 40px;
+        }
+
+        &_instagram{
+            margin-left: 240px;
+            margin-right: 40px;
+        }
+    }
+
+    &_footer{
+        padding: 10px 0 60px;
+    }
+}
+@media @desktop-strict {
+    .header{
+
+        &_logo-name{
+            margin-left: 55px;
+        }
+
+        &_logo{
+            margin-left: 360px;
+        }
+
+        &_number{
+            margin-left: 215px;
+            margin-right: 50px;
+        }
+    }
+
+    .menu{
+        background-color: #f2f2ed;
+        padding-left: 0;
+
+        &_search{
+            height: 35px;
+            margin-left: 280px;
+            margin-top: 8px;
+        }
+    }
+
+    .submenu{
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    .product{
+        margin-left: 61px;
+        margin-top: 19px;
+
+        &_photo {
+            & img {
+                height: 478px;
+                width: 456px;
+            }
+        }
+
+        h1{
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        &_price{
+            padding-top: 0;
+            font-size: 24px;
+            width: 0;
+            height: 0;
+        }
+
+        &_format{
+            width: 60px;
+            height: 60px;
+        }
+
+        &_color{
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        &_white{
+            width: 60px;
+            height: 60px;
+        }
+
+        &_yellow{
+            width: 60px;
+            height: 60px;
+        }
+
+        &_green{
+            width: 60px;
+            height: 60px;
+        }
+
+        &_buy {
+            width: 190px;
+            height: 70px;
+            font-size: 34px;
+            margin-top: 36px;
+        }
+
+        &_basket{
+            margin-top: 20px;
+        }
+    }
+
+    .footer{
+        margin-top: 50px;
+        padding-top: 40px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .information{
+
+        & h3{
+            font-size: 15px;
+        }
+
+        & p{
+            font-size: 12px;
+    }
+
+        &_part{
+           width: 150px;
+        }
+
+        &_part-two{
+            margin-top: 45px;
+            width: 130px;
+        }
+
+        &_company{
+            margin-left: 15px;
+        }
+
+        &_company-two{
+            margin-left: 0;
+        }
+
+        &_advantages{
+            margin-left: 50px;
+        }
+
+        &_text{
+            margin-left: 10px;
+        }
+
+        &_facebook{
+            margin-left: 80px;
+        }
+
+        &_heart{
+            margin-left: 60px;
+        }
+
+        &_stock{
+            margin-left: 60px;
+        }
+
+        &_twitter{
+            margin-left: 30px;
+        }
+
+        &_instagram{
+            margin-left: 70px;
+        }
+
+        &_footer{
+            padding: 20px 0 50px;
+        }
+    }
+}
