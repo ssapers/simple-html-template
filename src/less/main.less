@@ -291,6 +291,10 @@ hr{
         font-size: 15px;
         padding-left: 0;
 
+        & ul{
+            padding-left: 19px;
+        }
+
         li{
             list-style: none;
             display: inline;
@@ -303,7 +307,11 @@ hr{
 
     .submenu {
         margin-top: 20px;
-        margin-left: 20px;
+        margin-left: 0;
+
+        & ul{
+            padding-left: 35px;
+        }
 
         &_list li {
             list-style: none;
@@ -335,7 +343,8 @@ hr{
         }
 
         &_price{
-            padding-top: 5px;
+            height: 0;
+            padding-top: 0;
             margin-bottom: 0;
             font-size: 24px;
         }
@@ -396,7 +405,7 @@ hr{
     .footer{
         margin-top: 10px;
         padding-top: 10px;
-        padding-left: 20px;
+        padding-left: 40px;
         padding-right: 20px;
     }
 
@@ -405,16 +414,19 @@ hr{
         flex-direction: column;
 
         &_server-help{
+            flex-direction: column;
             margin-bottom: 20px;
         }
 
         &_part{
             margin-bottom: 24px;
+
+
         }
 
         &_part-two{
-            margin-top: 80px;
-            margin-left: 20px;
+            margin-top: 0;
+            margin-left: 0;
         }
 
         &_company{
@@ -422,17 +434,13 @@ hr{
         }
 
         &_company-two{
-            margin-left: 40px;
+            margin-left: 0;
             margin-top: 49px;
         }
 
         &_advantages{
             margin-top: 20px;
             margin-left: 0;
-        }
-
-        &_facebook{
-            margin-left: 10px;
         }
 
         &_heart{
@@ -445,21 +453,16 @@ hr{
             margin-left: 20px;
         }
 
-        &_twitter{
-            margin-left: 10px;
-        }
-
-        &_instagram{
-            margin-left: 10px;
-        }
-
         &_footer{
             padding: 20px 0 60px;
         }
-
-        &_text{
-
+        &_link{
+            margin-left:0;
+            flex-direction: row;
+            margin-right: 20px;
+            margin-bottom: 30px;
         }
+    ;
     }
 }
 @media @tablet-strict {
