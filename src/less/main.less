@@ -17,49 +17,129 @@ body{
     color: #C00;
     font-size: 20px;
     padding: 10px 0;
+    @media @phone-strict{
+        max-width: 300px;
+        margin: 0 auto;
+    }
 
     &_logo-name{
         margin-left: 100px;
+        @media @phone-strict{
+            margin-left: 0;
+        }
+        @media @tablet-strict{
+            margin-left: 40px;
+        }
+        @media @desktop-strict{
+            margin-left: 55px;
+        }
     }
 
     &_logo{
         margin-left: 500px;
+        @media @phone-strict{
+            margin-left: 22px;
+        }
+        @media @tablet-strict{
+            margin-left: 220px;
+        }
+        @media @desktop-strict{
+            margin-left: 360px;
+        }
     }
 
     &_number{
         display: inline-flex;
         margin-left: 310px;
         margin-right: 100px;
+        @media @phone-strict{
+            margin-left: 22px;
+        }
+        @media @tablet-strict{
+            margin-left: 135px;
+            margin-right: 40px;
+        }
+        @media @desktop-strict{
+            margin-left: 215px;
+            margin-right: 50px;
+        }
     }
 }
 
 
-.menu{
+.menu {
     display: flex;
     height: 51px;
     background-color: #f2f2ed;
     font-size: 17px;
     padding-left: 45px;
     border: 1px solid #d9d9d4;
+    @media @phone-strict {
+        height: 55px;
+        font-size: 15px;
+        padding-left: 0;
+    }
+    @media @tablet-strict{
+        height: 65px;
+        font-size: 15px;
+        padding-left: 0;
+    }
+    @media @desktop-strict{
+        padding-left: 0;
+    }
 
-    &_link{
+    &_link {
         color: #c00;
     }
 
-    li{
+    & ul{
+        @media @phone-strict {
+            padding-left: 0;
+            width: 310px;
+            margin: 15px auto;
+        }
+        @media @tablet-strict{
+            padding-left: 0;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    }
+
+    li {
         list-style: none;
         display: inline;
         margin-left: 19px;
         color: #000;
+        @media @phone-strict {
+            list-style: none;
+            display: inline;
+            margin-left: 10px;
+        }
+        @media @tablet-strict{
+            margin-top: 15px;
+        }
     }
 
-    &_search{
+    &_search {
         width: 282px;
         height: 40px;
         border: 1px solid #d9d9d4;
         background-color: #fff;
         margin-left: 513px;
         margin-top: 6px;
+        @media @phone-strict {
+            display: none;
+        }
+        @media @tablet-strict{
+            margin-left: 110px;
+            margin-top: 11px;
+            margin-right: 20px;
+        }
+        @media @desktop-strict{
+            height: 35px;
+            margin-left: 280px;
+            margin-top: 8px;
+        }
     }
 }
 
@@ -70,6 +150,24 @@ a:-webkit-any-link{
 .submenu{
     margin-top: 68px;
     margin-left: 65px;
+    @media @phone-strict{
+        width: 310px;
+        margin: 0 auto;
+    }
+    @media @tablet-strict{
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    @media @desktop-strict{
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    & ul{
+        @media @phone-strict{
+            padding-left: 5px;
+        }
+    }
 
     &_list li{
         list-style: none;
@@ -85,21 +183,64 @@ a:-webkit-any-link{
     margin-left: 110px;
     margin-top: 19px;
     margin-right: 100px;
+    @media @phone-strict{
+        flex-direction: column;
+        width: 310px;
+        margin: 0 auto;
+        padding-left: 10px;
+    }
+    @media @tablet-strict{
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+    @media @desktop-strict{
+        margin-left: 61px;
+        margin-top: 19px;
+    }
 
     &_photo {
         & img {
             height: 698px;
             width: 698px;
+            @media @phone-strict{
+                height: 256px;
+                width: 256px;
+            }
+            @media @tablet-strict{
+                height: 356px;
+                width: 356px;
+            }
+            @media @desktop-strict{
+                height: 478px;
+                width: 456px;
+            }
         }
     }
 
     &_name{
         margin-left: 60px;
+        @media @phone-strict{
+            margin-left: 0;
+        }
+        @media @tablet-strict{
+            margin-left: 40px
+        }
     }
 
     h1{
         font-size: 30px;
         margin-top: 0;
+        @media @phone-strict{
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        @media @tablet-strict{
+            margin-bottom: 0;
+            font-size: 20px;
+        }
+        @media @desktop-strict{
+            margin-bottom: 10px;
+        }
     }
 
     &_price{
@@ -109,6 +250,24 @@ a:-webkit-any-link{
         padding-top: 32px;
         font-size: 36px;
         font-weight: 700;
+        @media @phone-strict{
+            height: 0;
+            padding-top: 0;
+            margin-bottom: 0;
+            font-size: 24px;
+        }
+        @media @tablet-strict{
+            padding-top: 5px;
+            font-size: 24px;
+            width: 0;
+            height: 0;
+        }
+        @media @desktop-strict{
+            padding-top: 0;
+            font-size: 24px;
+            width: 0;
+            height: 0; //fix all width and height
+        }
     }
 
     &_size{
@@ -116,6 +275,21 @@ a:-webkit-any-link{
         font-size: 16px;
         font-weight: 400;
         line-height: 93px;
+        @media @phone-strict{
+            font-size: 16px;
+        }
+        @media @tablet-strict{
+            font-size: 16px;
+        }
+    }
+
+    & p{
+        @media @phone-strict{
+            font-size: 14px; // need fix
+        }
+        @media @tablet-strict{
+            font-size: 14px;
+        }
     }
 
     &_format{
@@ -125,11 +299,40 @@ a:-webkit-any-link{
         background-color: #fff;
         font-size: 36px;
         margin-top: 50px;
+        @media @phone-strict{
+            width: 38px;
+            height: 38px;
+            font-size: 30px;
+        }
+        @media @tablet-strict{
+            width: 38px;
+            height: 38px;
+            font-size: 30px;//need fix
+        }
+        @media @desktop-strict{
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &_color{
         margin-top: 32px;
         margin-bottom: 12px;
+        @media @tablet-strict{
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &_button-color{
+        @media @phone-strict{
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        @media @tablet-strict{
+            width: 38px;
+            height: 38px;
+        }
     }
 
     &_button-white{
@@ -137,6 +340,18 @@ a:-webkit-any-link{
         height: 69px;
         border: 1px solid #000;
         background-color: #fffafb;
+        @media @phone-strict{
+            width: 38px;
+            height: 38px;
+        }
+        @media @tablet-strict{
+            width: 38px;
+            height: 38px;
+        }
+        @media @desktop-strict{
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &_button-yellow{
@@ -144,6 +359,18 @@ a:-webkit-any-link{
         height: 69px;
         border: 1px solid #000;
         background-color: #e3d95e;
+        @media @phone-strict{
+            width: 38px;
+            height: 38px;
+        }
+        @media @tablet-strict{
+            width: 38px;
+            height: 38px;
+        }
+        @media @desktop-strict{
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &_button-green{
@@ -151,6 +378,18 @@ a:-webkit-any-link{
         height: 69px;
         border: 1px solid #000;
         background-color: #a5af96;
+        @media @phone-strict{
+            width: 38px;
+            height: 38px;
+        }
+        @media @tablet-strict{
+            width: 38px;
+            height: 38px; //fix all button
+        }
+        @media @desktop-strict{
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &_buy {
@@ -161,21 +400,59 @@ a:-webkit-any-link{
         border: 0;
         font-size: 36px;
         margin-top: 42px;
+        @media @phone-strict{
+            width: 150px;
+            height: 50px;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+        @media @tablet-strict{
+            width: 140px;
+            height: 40px;
+            font-size: 25px;
+            margin-top: 20px;
+        }
+        @media @desktop-strict{
+            width: 190px;
+            height: 70px;
+            font-size: 34px;
+            margin-top: 36px;
+        }
     }
 
     &_basket-img
     {
         height: 28px;
         width: 25px;
+        @media @tablet-strict{
+            height: 18px;
+            width: 15px;
+        }
     }
 
     &_basket{
         display: flex;
         margin-top: 44px;
+        @media @phone-strict{
+            margin-top: 20px;
+        }
+        @media @tablet-strict{
+            margin-top: 20px; // need fix
+        }
+        @media @desktop-strict{
+            margin-top: 20px;
+        }
 
         & a{
             margin-left: 6px;
             color: #999;
+            @media @phone-strict{
+                font-size: 13px;
+            }
+            @media @tablet-strict{
+                margin-left: 6px;
+                font-size: 12px;
+            }
         }
     }
 }
@@ -186,30 +463,106 @@ a:-webkit-any-link{
     padding-top: 62px;
     padding-left: 120px;
     padding-right: 100px;
+    @media @phone-strict{
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+    @media @tablet-strict{
+        margin-top: 20px;
+        padding-top: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @media @desktop-strict{
+        margin-top: 50px;
+        padding-top: 40px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
 }
 
 .information{
     display: flex;
+    @media @phone-strict{
+        flex-direction: column;
+    }
+    @media @tablet-strict{
+        flex-direction: column;
+    }
+
+    & h3{
+        @media @tablet-strict{
+            font-size: 20px;
+        }
+        @media @desktop-strict{
+            font-size: 15px;
+        }
+    }
+
+    & p{
+        @media @tablet-strict{
+            font-size: 15px;
+        }
+        @media @desktop-strict{
+            font-size: 12px;
+        }
+    }
 
     &_server-help{
         display: flex;
         margin-bottom: 64px;
+        @media @phone-strict{
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        @media @tablet-strict{
+            margin-bottom: 20px; //fix
+        }
     }
 
     &_part{
         width: 200px;
         margin-bottom: 24px;
+        @media @tablet-strict{
+            margin-bottom: 24px; //fix
+        }
+        @media @desktop-strict{
+            width: 150px;
+        }
     }
 
     &_part-two{
         width: 150px;
         margin-top: 50px;
         margin-left: 20px;
+        @media @phone-strict{
+            margin-top: 0;
+            margin-left: 0;
+        }
+        @media @tablet-strict{
+            margin-top: 56px;
+            margin-left: 100px;
+        }
+        @media @desktop-strict{
+            margin-top: 45px;
+            width: 130px;
+        }
     }
 
     &_company{
         display: flex;
         margin-left: 60px;
+        @media @phone-strict{
+            margin-left: 0;
+        }
+        @media @tablet-strict{
+            margin-left: 0; //fix
+        }
+        @media @desktop-strict{
+            margin-left: 15px;
+        }
     }
 
     &_company-part{
@@ -220,17 +573,42 @@ a:-webkit-any-link{
     &_company-two{
         margin-top: 50px;
         margin-left: 20px;
+        @media @phone-strict{
+            margin-left: 0;
+            margin-top: 49px;
+        }
+        @media @tablet-strict{
+            margin-left: 180px;
+            margin-top: 58px;
+        }
+        @media @desktop-strict{
+            margin-left: 0;
+        }
     }
 
     &_advantages{
         display: flex;
         margin-top: 40px;
         margin-left: 60px;
+        @media @phone-strict{
+            margin-top: 20px;
+            margin-left: 0;
+        }
+        @media @tablet-strict{
+            margin-top: 40px;
+            margin-left: 10px;
+        }
+        @media @desktop-strict{
+            margin-left: 50px;
+        }
     }
 
     &_text{
         margin-top: 0;
         margin-left: 10px;
+        @media @desktop-strict{
+            margin-left: 10px;
+        }
     }
 
     &_features{
@@ -242,12 +620,34 @@ a:-webkit-any-link{
         display: flex;
         margin-top: 15px;
         margin-left: 80px;
+        @media @phone-strict{
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        @media @tablet-strict{
+            margin-top: 10px;
+            margin-left: 20px; //fix
+        }
+        @media @desktop-strict{
+            margin-left: 60px;
+        }
     }
 
     &_stock{
         display: flex;
         margin-top: 15px;
         margin-left: 80px;
+        @media @phone-strict{
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+        @media @tablet-strict{
+            margin-top: 15px;
+            margin-left: 20px; //fix
+        }
+        @media @desktop-strict{
+            margin-left: 60px;
+        }
     }
 
     & a{
@@ -257,6 +657,15 @@ a:-webkit-any-link{
 
     &_footer{
         padding: 32px 0 104px;
+        @media @phone-strict{
+            padding: 20px 0 60px;
+        }
+        @media @tablet-strict{
+            padding: 10px 0 60px;
+        }
+        @media @desktop-strict{
+            padding: 20px 0 50px;
+        }
     }
 
     &_link{
@@ -266,565 +675,20 @@ a:-webkit-any-link{
         margin-top: 35px;
         margin-bottom: 90px;
         margin-left: 30px;
+        @media @phone-strict{
+            margin-left: 0;
+            flex-direction: row;
+            margin-right: 20px;
+            margin-bottom: 30px;
+        }
+        @media @tablet-strict{
+            flex-direction: row;
+            margin-bottom: 50px;
+        }
     }
 }
 
 hr{
     height: 1px;
     background-color: #d9d9d4;
-}
-
-@media @phone-strict {
-    .header{
-        max-width: 300px;
-        margin: 0 auto;
-
-
-        &_logo-name{
-            margin-left: 0;
-        }
-
-        &_logo{
-            margin-left: 22px;
-        }
-
-        &_number{
-            margin-left: 22px;
-        }
-    }
-
-    .menu {
-        height: 55px;
-        font-size: 15px;
-        padding-left: 0;
-
-        & ul{
-            padding-left: 0;
-            width: 310px;
-            margin: 15px auto;
-        }
-
-        li{
-            list-style: none;
-            display: inline;
-            margin-left: 10px;
-        }
-
-        &_search{
-            display: none;
-        }
-    }
-
-    .submenu {
-        width: 310px;
-        margin: 0 auto;
-
-        & ul{
-            padding-left: 5px;
-        }
-
-        &_list li {
-            list-style: none;
-            display: inline;
-            margin-left: 3px;
-        }
-    }
-
-    .product {
-        flex-direction: column;
-        display: flex;
-        width: 310px;
-        margin: 0 auto;
-        padding-left: 10px;
-
-        &_photo {
-            & img {
-                height: 256px;
-                width: 256px;
-            }
-        }
-
-        &_name{
-            margin-left: 0;
-        }
-
-        h1{
-            margin-top: 20px;
-            font-size: 20px;
-        }
-
-        &_price{
-            height: 0;
-            padding-top: 0;
-            margin-bottom: 0;
-            font-size: 24px;
-        }
-
-        &_size{
-            font-size: 16px;
-        }
-
-        & p{
-            font-size: 14px;
-        }
-
-        &_format{
-            width: 38px;
-            height: 38px;
-            font-size: 30px;
-            margin-top: 50px;
-        }
-
-        &_button-color{
-            margin-top: 32px;
-            margin-bottom: 12px;
-        }
-
-        &_button-white{
-            width: 38px;
-            height: 38px;
-        }
-
-        &_button-yellow{
-            width: 38px;
-            height: 38px;
-        }
-
-        &_button-green{
-            width: 38px;
-            height: 38px;
-        }
-
-        &_buy {
-            width: 150px;
-            height: 50px;
-            font-size: 30px;
-            margin-top: 20px;
-        }
-
-        &_basket{
-            display: flex;
-            margin-top: 20px;
-
-            & a{
-                margin-left: 6px;
-                font-size: 13px;
-            }
-        }
-    }
-
-    .footer{
-        margin-top: 10px;
-        padding-top: 10px;
-        padding-left: 40px;
-        padding-right: 20px;
-    }
-
-    .information{
-        display: flex;
-        flex-direction: column;
-
-        &_server-help{
-            flex-direction: column;
-            margin-bottom: 20px;
-        }
-
-        &_part{
-            margin-bottom: 24px;
-        }
-
-        &_part-two{
-            margin-top: 0;
-            margin-left: 0;
-        }
-
-        &_company{
-            margin-left: 0;
-        }
-
-        &_company-two{
-            margin-left: 0;
-            margin-top: 49px;
-        }
-
-        &_advantages{
-            margin-top: 20px;
-            margin-left: 0;
-        }
-
-        &_heart{
-            margin-top: 10px;
-            margin-left: 20px;
-        }
-
-        &_stock{
-            margin-top: 15px;
-            margin-left: 20px;
-        }
-
-        &_footer{
-            padding: 20px 0 60px;
-        }
-        &_link{
-            margin-left: 0;
-            flex-direction: row;
-            margin-right: 20px;
-            margin-bottom: 30px;
-        }
-    }
-}
-@media @tablet-strict {
-    .header{
-        padding: 10px 0;
-
-        &_logo-name{
-            margin-left: 40px;
-        }
-
-        &_logo{
-            margin-left: 220px;
-        }
-
-        &_number{
-            margin-left: 135px;
-            margin-right: 40px;
-        }
-    }
-
-    .menu {
-        height: 65px;
-        font-size: 15px;
-        padding-left: 0;
-
-
-        & ul{
-            padding-left: 0;
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-
-        li{
-            margin-top: 15px;
-        }
-
-        &_search{
-            width: 282px;
-            height: 40px;
-            margin-left: 110px;
-            margin-top: 11px;
-            margin-right: 20px;
-        }
-    }
-
-    .submenu {
-        margin-top: 30px;
-        margin-left: 0;
-
-        &_list li {
-            list-style: none;
-            display: inline;
-            margin-left: 3px;
-        }
-    }
-
-    .product {
-        margin-left: 40px;
-        margin-top: 30px;
-
-        &_photo {
-            & img {
-                height: 356px;
-                width: 356px;
-            }
-        }
-
-        &_name{
-            margin-left: 40px;
-        }
-
-        h1{
-            margin-top: 0;
-            margin-bottom: 0;
-            font-size: 20px;
-        }
-
-        &_price{
-            padding-top: 5px;
-            font-size: 24px;
-            width: 0;
-            height: 0;
-        }
-
-        &_size{
-            font-size: 16px;
-        }
-
-        & p{
-            font-size: 14px;
-        }
-
-        &_format{
-            width: 38px;
-            height: 38px;
-            font-size: 30px;
-            margin-top: 50px;
-        }
-
-        &_color{
-            margin-top: 20px;
-            margin-bottom: 12px;
-        }
-
-        &_button-white{
-            width: 38px;
-            height: 38px;
-        }
-
-        &_button-yellow{
-            width: 38px;
-            height: 38px;
-        }
-
-        &_button-green{
-            width: 38px;
-            height: 38px;
-        }
-
-        &_buy {
-            width: 140px;
-            height: 40px;
-            font-size: 25px;
-            margin-top: 20px;
-        }
-
-        &_basket-img
-        {
-            height: 18px;
-            width: 15px;
-        }
-
-        &_basket{
-            margin-top: 20px;
-
-            & a{
-                margin-left: 6px;
-                font-size: 12px;
-            }
-        }
-    }
-
-    .footer{
-        margin-top: 20px;
-        padding-top: 10px;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    .information{
-        display: flex;
-        flex-direction: column;
-
-
-        & h3{
-            font-size: 20px;
-        }
-
-        & p{
-            font-size: 15px;
-        }
-
-        &_server-help{
-            margin-bottom: 20px;
-        }
-
-        &_part{
-            margin-bottom: 24px;
-        }
-
-        &_part-two{
-            margin-top: 56px;
-            margin-left: 100px;
-        }
-
-        &_company{
-            margin-left: 0;
-        }
-
-        &_company-two{
-            margin-left: 180px;
-            margin-top: 58px;
-        }
-
-        &_advantages {
-            margin-top: 40px;
-            margin-left: 10px;
-        }
-
-        &_heart{
-            margin-top: 10px;
-            margin-left: 20px;
-        }
-
-        &_stock{
-            margin-top: 15px;
-            margin-left: 20px;
-        }
-
-        &_link{
-            flex-direction: row;
-            margin-bottom: 50px;
-        }
-    }
-
-    &_footer{
-        padding: 10px 0 60px;
-    }
-}
-@media @desktop-strict {
-    .header{
-
-        &_logo-name{
-            margin-left: 55px;
-        }
-
-        &_logo{
-            margin-left: 360px;
-        }
-
-        &_number{
-            margin-left: 215px;
-            margin-right: 50px;
-        }
-    }
-
-    .menu{
-        background-color: #f2f2ed;
-        padding-left: 0;
-
-        &_search{
-            height: 35px;
-            margin-left: 280px;
-            margin-top: 8px;
-        }
-    }
-
-    .submenu{
-        margin-top: 40px;
-        margin-left: 20px;
-    }
-
-    .product{
-        margin-left: 61px;
-        margin-top: 19px;
-
-        &_photo {
-            & img {
-                height: 478px;
-                width: 456px;
-            }
-        }
-
-        h1{
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        &_price{
-            padding-top: 0;
-            font-size: 24px;
-            width: 0;
-            height: 0;
-        }
-
-        &_format{
-            width: 60px;
-            height: 60px;
-        }
-
-        &_color{
-            margin-top: 32px;
-            margin-bottom: 12px;
-        }
-
-        &_button-white{
-            width: 60px;
-            height: 60px;
-        }
-
-        &_button-yellow{
-            width: 60px;
-            height: 60px;
-        }
-
-        &_button-green{
-            width: 60px;
-            height: 60px;
-        }
-
-        &_buy {
-            width: 190px;
-            height: 70px;
-            font-size: 34px;
-            margin-top: 36px;
-        }
-
-        &_basket{
-            margin-top: 20px;
-        }
-    }
-
-    .footer{
-        margin-top: 50px;
-        padding-top: 40px;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-
-    .information{
-
-        & h3{
-            font-size: 15px;
-        }
-
-        & p{
-            font-size: 12px;
-        }
-
-        &_part{
-           width: 150px;
-        }
-
-        &_part-two{
-            margin-top: 45px;
-            width: 130px;
-        }
-
-        &_company{
-            margin-left: 15px;
-        }
-
-        &_company-two{
-            margin-left: 0;
-        }
-
-        &_advantages{
-            margin-left: 50px;
-        }
-
-        &_text{
-            margin-left: 10px;
-        }
-
-        &_heart{
-            margin-left: 60px;
-        }
-
-        &_stock{
-            margin-left: 60px;
-        }
-
-        &_footer{
-            padding: 20px 0 50px;
-        }
-    }
 }
