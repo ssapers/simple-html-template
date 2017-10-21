@@ -1,5 +1,10 @@
 @import 'media';
 
+.content-size{
+    max-width: 310px;
+    margin: 0 auto;
+}
+
 body{
     margin: 0;
     background: white;
@@ -271,33 +276,38 @@ hr{
 
 @media @phone-strict {
     .header{
-        padding: 10px 0;
+        max-width: 300px;
+        margin: 0 auto;
+
 
         &_logo-name{
-            margin-left: 20px;
+            margin-left: 0;
         }
 
         &_logo{
-            margin-left: 20px;
+            margin-left: 22px;
         }
 
         &_number{
-            margin-left: 20px;
+            margin-left: 22px;
         }
     }
 
     .menu {
-        height: 65px;
+        height: 55px;
         font-size: 15px;
         padding-left: 0;
 
         & ul{
-            padding-left: 19px;
+            padding-left: 0;
+            width: 310px;
+            margin: 15px auto;
         }
 
         li{
             list-style: none;
             display: inline;
+            margin-left: 10px;
         }
 
         &_search{
@@ -306,11 +316,11 @@ hr{
     }
 
     .submenu {
-        margin-top: 20px;
-        margin-left: 0;
+        width: 310px;
+        margin: 0 auto;
 
         & ul{
-            padding-left: 35px;
+            padding-left: 5px;
         }
 
         &_list li {
@@ -321,10 +331,11 @@ hr{
     }
 
     .product {
-        margin-left: 35px;
         flex-direction: column;
         display: flex;
-        margin-top: 20px;
+        width: 310px;
+        margin: 0 auto;
+        padding-left: 10px;
 
         &_photo {
             & img {
@@ -457,12 +468,11 @@ hr{
             padding: 20px 0 60px;
         }
         &_link{
-            margin-left:0;
+            margin-left: 0;
             flex-direction: row;
             margin-right: 20px;
             margin-bottom: 30px;
         }
-    ;
     }
 }
 @media @tablet-strict {
