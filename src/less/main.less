@@ -1,8 +1,23 @@
 @import 'media';
 
 .content-size{
-    max-width: 310px;
-    margin: 0 auto;
+    width: 0;
+    height: 0;
+}
+
+.format-button-size{
+    width: 38px;
+    height: 38px;
+    font-size: 30px;
+}
+
+.format_button_size-color{
+    width: 38px;
+    height: 38px;
+}
+
+.basket-indent{
+    margin-top: 20px;
 }
 
 body{
@@ -111,8 +126,6 @@ body{
         margin-left: 19px;
         color: #000;
         @media @phone-strict {
-            list-style: none;
-            display: inline;
             margin-left: 10px;
         }
         @media @tablet-strict{
@@ -251,7 +264,7 @@ a:-webkit-any-link{
         font-size: 36px;
         font-weight: 700;
         @media @phone-strict{
-            height: 0;
+            .content-size;
             padding-top: 0;
             margin-bottom: 0;
             font-size: 24px;
@@ -259,14 +272,12 @@ a:-webkit-any-link{
         @media @tablet-strict{
             padding-top: 5px;
             font-size: 24px;
-            width: 0;
-            height: 0;
+            .content-size;
         }
         @media @desktop-strict{
             padding-top: 0;
             font-size: 24px;
-            width: 0;
-            height: 0; //fix all width and height
+            .content-size;
         }
     }
 
@@ -275,17 +286,11 @@ a:-webkit-any-link{
         font-size: 16px;
         font-weight: 400;
         line-height: 93px;
-        @media @phone-strict{
-            font-size: 16px;
-        }
-        @media @tablet-strict{
-            font-size: 16px;
-        }
     }
 
     & p{
         @media @phone-strict{
-            font-size: 14px; // need fix
+            font-size: 14px;
         }
         @media @tablet-strict{
             font-size: 14px;
@@ -300,14 +305,10 @@ a:-webkit-any-link{
         font-size: 36px;
         margin-top: 50px;
         @media @phone-strict{
-            width: 38px;
-            height: 38px;
-            font-size: 30px;
+            .format-button-size
         }
         @media @tablet-strict{
-            width: 38px;
-            height: 38px;
-            font-size: 30px;//need fix
+            .format-button-size
         }
         @media @desktop-strict{
             width: 60px;
@@ -341,12 +342,10 @@ a:-webkit-any-link{
         border: 1px solid #000;
         background-color: #fffafb;
         @media @phone-strict{
-            width: 38px;
-            height: 38px;
+            .format_button_size-color;
         }
         @media @tablet-strict{
-            width: 38px;
-            height: 38px;
+            .format_button_size-color;
         }
         @media @desktop-strict{
             width: 60px;
@@ -360,12 +359,10 @@ a:-webkit-any-link{
         border: 1px solid #000;
         background-color: #e3d95e;
         @media @phone-strict{
-            width: 38px;
-            height: 38px;
+            .format_button_size-color;
         }
         @media @tablet-strict{
-            width: 38px;
-            height: 38px;
+            .format_button_size-color;
         }
         @media @desktop-strict{
             width: 60px;
@@ -379,12 +376,10 @@ a:-webkit-any-link{
         border: 1px solid #000;
         background-color: #a5af96;
         @media @phone-strict{
-            width: 38px;
-            height: 38px;
+            .format_button_size-color;
         }
         @media @tablet-strict{
-            width: 38px;
-            height: 38px; //fix all button
+            .format_button_size-color;
         }
         @media @desktop-strict{
             width: 60px;
@@ -434,13 +429,13 @@ a:-webkit-any-link{
         display: flex;
         margin-top: 44px;
         @media @phone-strict{
-            margin-top: 20px;
+            .basket-indent
         }
         @media @tablet-strict{
-            margin-top: 20px; // need fix
+            .basket-indent
         }
         @media @desktop-strict{
-            margin-top: 20px;
+            .basket-indent
         }
 
         & a{
@@ -518,16 +513,13 @@ a:-webkit-any-link{
             margin-bottom: 20px;
         }
         @media @tablet-strict{
-            margin-bottom: 20px; //fix
+            margin-bottom: 20px;
         }
     }
 
     &_part{
         width: 200px;
         margin-bottom: 24px;
-        @media @tablet-strict{
-            margin-bottom: 24px; //fix
-        }
         @media @desktop-strict{
             width: 150px;
         }
@@ -558,7 +550,7 @@ a:-webkit-any-link{
             margin-left: 0;
         }
         @media @tablet-strict{
-            margin-left: 0; //fix
+            margin-left: 0;
         }
         @media @desktop-strict{
             margin-left: 15px;
@@ -626,7 +618,7 @@ a:-webkit-any-link{
         }
         @media @tablet-strict{
             margin-top: 10px;
-            margin-left: 20px; //fix
+            margin-left: 20px;
         }
         @media @desktop-strict{
             margin-left: 60px;
@@ -638,12 +630,10 @@ a:-webkit-any-link{
         margin-top: 15px;
         margin-left: 80px;
         @media @phone-strict{
-            margin-top: 15px;
             margin-left: 20px;
         }
         @media @tablet-strict{
-            margin-top: 15px;
-            margin-left: 20px; //fix
+            margin-left: 20px;
         }
         @media @desktop-strict{
             margin-left: 60px;
