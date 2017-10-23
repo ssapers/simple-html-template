@@ -20,6 +20,14 @@
     margin-top: 20px;
 }
 
+input:focus {
+    border: 2px solid #C00;
+}
+
+input {
+    outline: 0 !important;
+}
+
 body{
     margin: 0;
     background: white;
@@ -153,6 +161,23 @@ body{
             margin-left: 280px;
             margin-top: 8px;
         }
+    }
+
+    &_search-field{
+        border: none;
+        width: 250px;
+        height: 40px;
+        @media @desktop-strict{
+            height: 35px;
+        }
+    }
+
+    &_search-icon {
+        background: url("../img/search.svg");
+        vertical-align: middle;
+        border: none;
+        width: 24px;
+        height: 24px;
     }
 }
 
