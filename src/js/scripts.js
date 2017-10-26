@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const changeSize = (x) => {
     const y = document.getElementById('size');
     if(x === 1) {
