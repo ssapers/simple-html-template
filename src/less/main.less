@@ -128,7 +128,7 @@ body{
         }
     }
 
-    li {
+    &_item {
         list-style: none;
         display: inline;
         margin-left: 19px;
@@ -207,7 +207,7 @@ a:-webkit-any-link{
         }
     }
 
-    &_list li{
+    &_item{
         list-style: none;
         display: inline;
         margin-left: 3px;
@@ -481,13 +481,14 @@ a:-webkit-any-link{
     background-color: #f2f2ed;
     margin-top: 121px;
     padding-top: 62px;
-    padding-left: 120px;
+    padding-left: 110px;
     padding-right: 100px;
+
     @media @phone-strict{
-        margin-top: 10px;
+        margin-top: 20px;
         padding-top: 10px;
-        padding-left: 40px;
-        padding-right: 20px;
+        padding-left: 0;
+        padding-right: 0;
     }
     @media @tablet-strict{
         margin-top: 20px;
@@ -506,6 +507,8 @@ a:-webkit-any-link{
 .information{
     display: flex;
     @media @phone-strict{
+        max-width: 310px;
+        margin: 10px auto 0;
         flex-direction: column;
     }
     @media @tablet-strict{
@@ -513,6 +516,7 @@ a:-webkit-any-link{
     }
 
     & h3{
+        margin: 0;
         @media @tablet-strict{
             font-size: 20px;
         }
@@ -521,56 +525,58 @@ a:-webkit-any-link{
         }
     }
 
-    & p{
-        @media @tablet-strict{
-            font-size: 15px;
-        }
-        @media @desktop-strict{
-            font-size: 12px;
-        }
-    }
-
-    &_server-help{
+    &_server_help{
         display: flex;
         margin-bottom: 64px;
         @media @phone-strict{
             flex-direction: column;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         @media @tablet-strict{
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
     }
 
     &_part{
-        width: 200px;
+        padding-left: 0;
+        width: 240px;
         margin-bottom: 24px;
+        @media @phone-strict{
+            margin-bottom: 0;
+        }
         @media @desktop-strict{
             width: 150px;
         }
     }
 
-    &_part-two{
+    &_item{
+        list-style: none;
+        display: block;
+        margin: 10px 0;
+    }
+
+    &_part_two{
+        padding-left: 0;
         width: 150px;
-        margin-top: 50px;
-        margin-left: 20px;
+        margin-left: 0;
+        margin-top: 49px;
         @media @phone-strict{
             margin-top: 0;
             margin-left: 0;
         }
         @media @tablet-strict{
-            margin-top: 56px;
+            margin-top: 50px;
             margin-left: 100px;
         }
         @media @desktop-strict{
+            margin-left: 20px;
             margin-top: 45px;
-            width: 130px;
         }
     }
 
     &_company{
         display: flex;
-        margin-left: 60px;
+        margin-left: 20px;
         @media @phone-strict{
             margin-left: 0;
         }
@@ -578,17 +584,25 @@ a:-webkit-any-link{
             margin-left: 0;
         }
         @media @desktop-strict{
-            margin-left: 15px;
+            margin-left: 5px;
         }
     }
 
     &_company-part{
-        margin-top: 24px;
         width: 120px;
+        @media @phone-strict{
+            padding-left: 0;
+        }
+        @media @tablet-strict{
+            padding-left: 0;
+        }
+        @media @desktop-strict{
+            padding-left: 20px;
+        }
     }
 
-    &_company-two{
-        margin-top: 50px;
+    &_company_two{
+        margin-top: 49px;
         margin-left: 20px;
         @media @phone-strict{
             margin-left: 0;
@@ -596,10 +610,11 @@ a:-webkit-any-link{
         }
         @media @tablet-strict{
             margin-left: 180px;
-            margin-top: 58px;
+            margin-top: 50px;
         }
         @media @desktop-strict{
             margin-left: 0;
+            padding-left: 0;
         }
     }
 
@@ -616,7 +631,8 @@ a:-webkit-any-link{
             margin-left: 10px;
         }
         @media @desktop-strict{
-            margin-left: 50px;
+            margin-top: 30px;
+            margin-left: 20px;
         }
     }
 
@@ -631,6 +647,9 @@ a:-webkit-any-link{
     &_features{
         display: flex;
         flex-direction: column;
+        @media @phone-strict{
+            width: 295px;
+        }
     }
 
     &_heart{
@@ -646,7 +665,8 @@ a:-webkit-any-link{
             margin-left: 20px;
         }
         @media @desktop-strict{
-            margin-left: 60px;
+            margin-top: 0;
+            margin-left: 40px;
         }
     }
 
@@ -661,7 +681,8 @@ a:-webkit-any-link{
             margin-left: 20px;
         }
         @media @desktop-strict{
-            margin-left: 60px;
+            margin-top: 0;
+            margin-left: 40px;
         }
     }
 
@@ -674,6 +695,8 @@ a:-webkit-any-link{
         padding: 32px 0 104px;
         @media @phone-strict{
             padding: 20px 0 60px;
+            max-width: 310px;
+            margin: 0 auto;
         }
         @media @tablet-strict{
             padding: 10px 0 60px;
@@ -706,4 +729,8 @@ a:-webkit-any-link{
 hr{
     height: 1px;
     background-color: #d9d9d4;
+    @media @phone-strict{
+        max-width: 310px;
+        margin: 0 auto;
+    }
 }
