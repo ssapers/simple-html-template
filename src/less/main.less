@@ -1,4 +1,5 @@
 @import 'media';
+@import (less) '../../node_modules/normalize.css/normalize.css';
 
 .content-size{
     width: 0;
@@ -35,8 +36,11 @@ body{
 }
 
 .header{
+    max-width: 1200px;//fix
+    margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #C00;
     font-size: 20px;
     padding: 10px 0;
@@ -46,7 +50,7 @@ body{
     }
 
     &_logo-name{
-        margin-left: 100px;
+
         @media @phone-strict{
             margin-left: 0;
         }
@@ -72,9 +76,8 @@ body{
     }
 
     &_number{
-        display: inline-flex;
         margin-left: 310px;
-        margin-right: 100px;
+
         @media @phone-strict{
             margin-left: 22px;
         }
@@ -89,14 +92,18 @@ body{
     }
 }
 
+#menu-color{
+    background-color: #f2f2ed;
+    border: 1px solid #d9d9d4;
+}
 
 .menu {
+    max-width: 1200px; //fix
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     height: 51px;
-    background-color: #f2f2ed;
     font-size: 17px;
-    padding-left: 45px;
-    border: 1px solid #d9d9d4;
     @media @phone-strict {
         height: 55px;
         font-size: 15px;
@@ -108,6 +115,7 @@ body{
         padding-left: 0;
     }
     @media @desktop-strict{
+        margin-left: 40px;
         padding-left: 0;
     }
 
@@ -116,6 +124,7 @@ body{
     }
 
     & ul{
+        padding-left: 0;
         @media @phone-strict {
             padding-left: 0;
             width: 310px;
@@ -160,6 +169,7 @@ body{
             height: 35px;
             margin-left: 280px;
             margin-top: 8px;
+            margin-right: 40px;
         }
     }
 
@@ -185,22 +195,23 @@ body{
     a{
         color: #c00;
     }
-    margin-top: 68px;
-    margin-left: 65px;
+    max-width: 1200px; //fix
+    margin: 68px auto 10px;
     @media @phone-strict{
         width: 310px;
         margin: 0 auto;
     }
     @media @tablet-strict{
         margin-top: 30px;
-        margin-left: 0;
+        margin-left: 40px;
     }
     @media @desktop-strict{
         margin-top: 40px;
-        margin-left: 20px;
+        margin-left: 60px;
     }
 
     & ul{
+        padding: 0;
         @media @phone-strict{
             padding-left: 5px;
         }
@@ -215,11 +226,10 @@ body{
 }
 
 .product{
+    max-width: 1200px; //fix
+    margin: 0 auto;
     flex-direction: row;
     display: flex;
-    margin-left: 110px;
-    margin-top: 19px;
-    margin-right: 100px;
     @media @phone-strict{
         flex-direction: column;
         width: 310px;
@@ -229,10 +239,12 @@ body{
     @media @tablet-strict{
         margin-left: 40px;
         margin-top: 30px;
+        margin-right: 40px;
     }
     @media @desktop-strict{
         margin-left: 61px;
         margin-top: 19px;
+        margin-right: 40px;
     }
 
     &_photo {
@@ -478,18 +490,28 @@ body{
 
 .footer{
     background-color: #f2f2ed;
-    margin-top: 121px;
+}
+
+
+.information{
+    display: flex;
+    background-color: #f2f2ed;
     padding-top: 62px;
     padding-left: 110px;
     padding-right: 100px;
+    max-width: 1200px; //fix
+    margin: 121px auto 0;
 
     @media @phone-strict{
-        margin-top: 20px;
         padding-top: 10px;
         padding-left: 0;
         padding-right: 0;
+        max-width: 310px;
+        margin: 30px auto 0;
+        flex-direction: column;
     }
     @media @tablet-strict{
+        flex-direction: column;
         margin-top: 20px;
         padding-top: 10px;
         padding-left: 50px;
@@ -500,18 +522,6 @@ body{
         padding-top: 40px;
         padding-left: 60px;
         padding-right: 60px;
-    }
-}
-
-.information{
-    display: flex;
-    @media @phone-strict{
-        max-width: 310px;
-        margin: 10px auto 0;
-        flex-direction: column;
-    }
-    @media @tablet-strict{
-        flex-direction: column;
     }
 
     & h3{
@@ -691,6 +701,8 @@ body{
     }
 
     &_footer{
+        max-width: 1200px;//fix
+        margin: 0 auto;
         padding: 32px 0 104px;
         @media @phone-strict{
             padding: 20px 0 60px;
@@ -698,10 +710,17 @@ body{
             margin: 0 auto;
         }
         @media @tablet-strict{
-            padding: 10px 0 60px;
+            flex-direction: column;
+            margin-top: 20px;
+            padding-top: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
         }
         @media @desktop-strict{
-            padding: 20px 0 50px;
+            margin-top: 40px;
+            padding-top: 20px;
+            padding-left: 60px;
+            padding-right: 60px;
         }
     }
 
@@ -728,8 +747,16 @@ body{
 hr{
     height: 1px;
     background-color: #d9d9d4;
+    max-width: 1200px;//FIX
+    margin: 0 auto;
     @media @phone-strict{
         max-width: 310px;
         margin: 0 auto;
+    }
+    @media @tablet-strict{
+        margin: 0 50px;
+    }
+    @media @desktop-strict{
+        margin: 0 60px;
     }
 }
