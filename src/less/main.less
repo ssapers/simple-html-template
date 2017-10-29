@@ -22,7 +22,7 @@
 }
 
 input:focus {
-    border: 2px solid #C00;
+    border: 1px solid #C00;
 }
 
 input {
@@ -250,6 +250,9 @@ body{
 }
 
 .product{
+    input:focus {
+        border: 2px solid #C00;
+    }
     .max-width;
     flex-direction: row;
     display: flex;
@@ -358,7 +361,7 @@ body{
 
     &_format{
         width: 69px;
-        height: 68px;
+        height: 69px;
         border: 1px solid #000;
         background-color: #fff;
         font-size: 36px;
@@ -375,7 +378,7 @@ body{
         }
     }
 
-    &_color{
+    &_choose-color{
         margin-top: 32px;
         margin-bottom: 12px;
         @media @tablet-strict{
@@ -385,6 +388,9 @@ body{
     }
 
     &_button-color{
+        width: 69px;
+        height: 69px;
+        border: 1px solid #000;
         @media @phone-strict{
             margin-top: 32px;
             margin-bottom: 12px;
@@ -396,9 +402,6 @@ body{
     }
 
     &_button-white{
-        width: 69px;
-        height: 69px;
-        border: 1px solid #000;
         background-color: #fffafb;
         @media @phone-strict{
             .format_button_size-color;
@@ -413,9 +416,6 @@ body{
     }
 
     &_button-yellow{
-        width: 69px;
-        height: 69px;
-        border: 1px solid #000;
         background-color: #e3d95e;
         @media @phone-strict{
             .format_button_size-color;
@@ -430,9 +430,6 @@ body{
     }
 
     &_button-green{
-        width: 69px;
-        height: 69px;
-        border: 1px solid #000;
         background-color: #a5af96;
         @media @phone-strict{
             .format_button_size-color;

@@ -72,27 +72,21 @@
         <form action="" id="formProperty">
         <div class="product_size" id="size"><span>Размер:</span></div>
         <div>
-            <input
-                    data-action="S"
-                    type="button" class="product_format" value="S">
-            <input
-                    data-action="M"
-                    type="button" class="product_format" value="M">
-            <input
-                    data-action="L"
-                    type="button" class="product_format" value="L">
+            <% const value = ['S','M','L']%>
+            <%value.forEach(function(item){%>
+            <input type="button"  class="product_format" data-action="<%=item%>" value="<%=item%>">
+            <%});%>
         </div>
-    <div class="product_color" id="color"><span>Цвет:</span></div>
+    <div class="product_choose-color" id="color"><span>Цвет:</span></div>
         <div>
-            <input
-                    data-action="white"
-                    type="button" class="product_button-white" >
-            <input
-                    data-action="yellow"
-                    type="button" class="product_button-yellow">
-            <input
-                    data-action="green"
-                    type="button" class="product_button-green">
+            <% const data_action = ['white','yellow','green']%>
+            <%data_action.forEach(function(item,index){%>
+            <input type="button" class="product_button-color
+                <%if (index == 0) {%>product_button-white<%}%>
+                <%if (index == 1) {%>product_button-yellow<%}%>
+                <%if (index == 2) {%>product_button-green<%}%>"
+                   data-action="<%=item%>">
+            <%});%>
         </div>
         <div><button type="button" class="product_buy">Купить</button></div>
 
