@@ -29,6 +29,21 @@ input {
     outline: 0 !important;
 }
 
+.max-width{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.list-item{
+    list-style: none;
+    display: inline;
+
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+}
+
 body{
     margin: 0;
     background: white;
@@ -36,8 +51,7 @@ body{
 }
 
 .header{
-    max-width: 1200px;//fix
-    margin: 0 auto;
+    .max-width;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -98,8 +112,7 @@ body{
 }
 
 .menu {
-    max-width: 1200px; //fix
-    margin: 0 auto;
+    .max-width;
     display: flex;
     justify-content: space-between;
     height: 51px;
@@ -126,15 +139,22 @@ body{
     & ul{
         padding-left: 0;
         @media @phone-strict {
-            padding-left: 0;
+            padding-left: 10px;
             width: 310px;
             margin: 15px auto;
         }
         @media @tablet-strict{
-            padding-left: 0;
+            padding-left: 20px;
             margin-left: 20px;
             margin-top: 20px;
         }
+        @media @desktop-strict{
+            padding-left: 20px;
+        }
+    }
+
+    &_item-lisp{
+        .list-item;
     }
 
     &_item {
@@ -195,7 +215,7 @@ body{
     a{
         color: #c00;
     }
-    max-width: 1200px; //fix
+    max-width: 1200px;
     margin: 68px auto 10px;
     @media @phone-strict{
         width: 310px;
@@ -223,11 +243,14 @@ body{
         margin-left: 3px;
         color: #000;
     }
+
+    &_last-item{
+        .list-item;
+    }
 }
 
 .product{
-    max-width: 1200px; //fix
-    margin: 0 auto;
+    .max-width;
     flex-direction: row;
     display: flex;
     @media @phone-strict{
@@ -499,7 +522,7 @@ body{
     padding-top: 62px;
     padding-left: 110px;
     padding-right: 100px;
-    max-width: 1200px; //fix
+    max-width: 1200px;
     margin: 121px auto 0;
 
     @media @phone-strict{
@@ -701,8 +724,7 @@ body{
     }
 
     &_footer{
-        max-width: 1200px;//fix
-        margin: 0 auto;
+        .max-width;
         padding: 32px 0 104px;
         @media @phone-strict{
             padding: 20px 0 60px;
@@ -747,8 +769,7 @@ body{
 hr{
     height: 1px;
     background-color: #d9d9d4;
-    max-width: 1200px;//FIX
-    margin: 0 auto;
+    .max-width;
     @media @phone-strict{
         max-width: 310px;
         margin: 0 auto;

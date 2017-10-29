@@ -22,10 +22,16 @@
     <div class="menu">
         <ul class="menu_list">
             <% const menu = ['LISP', 'OCaml', 'Javascript', 'Python', 'PHP']; %>
-            <%menu.forEach(function (item) { %>
+            <%menu.forEach(function (item,index) { %>
+            <%if (index === 0) {%>
+            <li class="menu_item-lisp">
+                <a href=""><%=item%></a></li>
+            <%}%>
+            <%if(index>0) {%>
             <li class="menu_item">
                 <a href="#" class="menu_link"><%= item %></a>
             </li>
+            <%}%>
             <% }); %>
         </ul>
         <form >
@@ -40,11 +46,19 @@
 
     <div class="submenu">
         <ul class="submenu_list">
-            <% const submenu = ['LISP/', 'Одежда', '/Футболки']; %>
-            <%submenu.forEach(function (item) { %>
+            <% const submenu = ['LISP', 'Одежда', 'Футболки']; %>
+            <%submenu.forEach(function (item,index) { %>
+            <%if ((submenu.length-1) > index){%>
             <li class="submenu_item">
                 <a href="#" ><%= item %></a>
+                <% if(index < (submenu.length - 1)) { %>
+                <span>/</span>
+                <% } %>
             </li>
+            <%}%>
+            <%if((submenu.length-1) === index){%>
+            <li class="submenu_last-item"><a href=""><%=item%></a></li>
+            <%}%>
             <% }); %>
         </ul>
     </div>
@@ -71,7 +85,7 @@
         <div><button type="button" class="product_buy">Купить</button></div>
 
         <div class="product_basket">
-            <img src="img/heart.svg" alt="" class="product_basket-img">
+            <img src="img/heart-put.svg" alt="" class="product_basket-img">
             <div><a href="">Отложить на потом</a></div>
         </div>
 
