@@ -1,36 +1,35 @@
 /* eslint-disable no-unused-vars */
-const changeSize = (x) => {
-    const y = document.getElementById('size');
-    if(x === 1) {
-        y.innerHTML = '<span>Размер: <b>S</b></span> ';
+
+const form = document.getElementById('formProperty');
+form.addEventListener('click', function (event) {
+    const action = event.target.getAttribute('data-action');
+    const size = document.getElementById('size');
+    const color = document.getElementById('color');
+    const img = document.getElementById('img');
+    if(action === 'S') {
+        size.innerHTML = '<span>Размер: <b>S</b></span> ';
 
     }
-    if(x === 2) {
-        y.innerHTML = '<span>Размер: <b>M</b></span> ';
+    if(action === 'M') {
+        size.innerHTML = '<span>Размер: <b>M</b></span> ';
 
     }
-    if(x === 3) {
-        y.innerHTML = '<span>Размер: <b>L</b></span> ';
+    if(action === 'L') {
+        size.innerHTML = '<span>Размер: <b>L</b></span> ';
+    }
+    if(action === 'white') {
+        color.innerHTML = '<span>Цвет: <b>White</b></span> ';
+        img.innerHTML = '<img src="img/tshirt_white.jpg">';
 
     }
-};
-const changeColor = (x) => {
-    const y = document.getElementById('color');
-    const z = document.getElementById('img');
-    if(x === 1) {
-        y.innerHTML = '<span>Цвет: <b>White</b></span> ';
-        z.innerHTML = '<img src="img/tshirt_white.jpg">';
+    if(action === 'yellow') {
+        color.innerHTML = '<span>Цвет: <b>Yellow</b></span> ';
+        img.innerHTML = '<img src="img/tshirt_yellow.jpg">';
 
     }
-    if(x === 2) {
-        y.innerHTML = '<span>Цвет: <b>Yellow</b></span> ';
-        z.innerHTML = '<img src="img/tshirt_yellow.jpg">';
-
+    if(action === 'green') {
+        color.innerHTML = '<span>Цвет: <b>Green</b></span> ';
+        img.innerHTML = '<img src="img/tshirt_green.jpg">';
     }
-    if(x === 3) {
-        y.innerHTML = '<span>Цвет: <b>Green</b></span> ';
-        z.innerHTML = '<img src="img/tshirt_green.jpg">';
-
-    }
-};
+});
 

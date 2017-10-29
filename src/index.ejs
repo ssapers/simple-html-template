@@ -69,18 +69,30 @@
     <div class="product_name"><h1>Футболка Alien technology</h1>
         <p>Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</p>
         <h1 class="product_price">1500₽</h1>
+        <form action="" id="formProperty">
         <div class="product_size" id="size"><span>Размер:</span></div>
-
-        <div >
-            <input type="button" class="product_format" value="S" onclick="changeSize(1)"></input>
-            <input type="button" class="product_format" value="M" onclick="changeSize(2)"></input>
-            <input type="button" class="product_format" value="L" onclick="changeSize(3)"></input>
+        <div>
+            <input
+                    data-action="S"
+                    type="button" class="product_format" value="S">
+            <input
+                    data-action="M"
+                    type="button" class="product_format" value="M">
+            <input
+                    data-action="L"
+                    type="button" class="product_format" value="L">
         </div>
     <div class="product_color" id="color"><span>Цвет:</span></div>
         <div>
-            <input type="button" class="product_button-white" onclick="changeColor(1)"></input>
-            <input type="button" class="product_button-yellow" onclick="changeColor(2)"></input>
-            <input type="button" class="product_button-green" onclick="changeColor(3)"></input>
+            <input
+                    data-action="white"
+                    type="button" class="product_button-white" >
+            <input
+                    data-action="yellow"
+                    type="button" class="product_button-yellow">
+            <input
+                    data-action="green"
+                    type="button" class="product_button-green">
         </div>
         <div><button type="button" class="product_buy">Купить</button></div>
 
@@ -88,7 +100,7 @@
             <img src="img/heart-put.svg" alt="" class="product_basket-img">
             <div><a href="">Отложить на потом</a></div>
         </div>
-
+        </form>
     </div>
 
 </div>
