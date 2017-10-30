@@ -34,7 +34,7 @@
             <%}%>
             <% }); %>
         </ul>
-        <form >
+        <form action="#">
         <div class="menu_search">
             <input type="search" name="q" class="menu_search-field">
             <input type="submit" value="" class="menu_search-icon">
@@ -69,7 +69,7 @@
     <div class="product_name"><h1>Футболка Alien technology</h1>
         <p>Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</p>
         <h1 class="product_price">1500₽</h1>
-        <form action="" id="formProperty">
+        <form action="#" id="formProperty">
         <div class="product_size" id="size"><span>Размер:</span></div>
         <div>
             <% const value = ['S','M','L']%>
@@ -85,7 +85,7 @@
                 <%if (index == 0) {%>product_button-white<%}%>
                 <%if (index == 1) {%>product_button-yellow<%}%>
                 <%if (index == 2) {%>product_button-green<%}%>"
-                   data-action="<%=item%>">
+                   data-action="<%=item%>" value=" ">
             <%});%>
         </div>
         <div><button type="button" class="product_buy">Купить</button></div>
@@ -102,7 +102,7 @@
 <section class="footer">
     <div class="information">
         <div class="information_server_help">
-                <ul class="information_server_help-list"><h3>Сервис и поддержка</h3>
+            <ul class="information_server_help-list"><li class="information_server_help-title">Сервис и поддержка</li>
                     <% const information_server_help = ['Как сделать заказ', 'Возврат товара', 'Публичная оферта', 'Доставка']; %>
                     <%information_server_help.forEach(function (item) { %>
                     <li class="information_item">
@@ -122,7 +122,7 @@
             </div>
         </div>
         <div class="information_company">
-            <div><ul class="information_company-part"><h3>О компании</h3>
+            <div><ul class="information_company-part"><li class="information_company-title">О компании</li>
                     <% const information_company = ['О нас', 'Контакты', 'Вакансии', 'Партнерам']; %>
                     <%information_company.forEach(function (item) { %>
                     <li class="information_item">
