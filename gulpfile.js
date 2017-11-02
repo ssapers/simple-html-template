@@ -6,7 +6,9 @@ const rename       = require('gulp-rename');
 const ejs          = require('gulp-ejs');
 const gutil        = require('gulp-util');
 const sourcemaps = require('gulp-sourcemaps');
-const imagemin = require('gulp-imagemin');
+/*const env = process.env.NODE_ENV*/
+/*const uglify = require('gulp-uglify-es').default;
+const csso = require('gulp-csso');*/
 // Автоперезагрузка при изменении файлов в папке `dist`:
 // Принцип: меняем файлы в `/src`, они обрабатываются и переносятся в `dist` и срабатывает автоперезагрузка.
 // Это таск нужен только при локальной разработке.
@@ -25,22 +27,26 @@ gulp.task('livereload', () => {
 
 gulp.task('styles', () => {
     gulp.src('src/less/main.less')
+
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(autoprefixer())
+        /*.pipe(csso())*/
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('img', () => {
     gulp.src('src/img/**/*.*')
-        .pipe(imagemin())
+        /*.pipe (env==='development'||imagemin())*/
         .pipe(gulp.dest('./dist/img'));
 });
 
 gulp.task('js', () => {
     gulp.src('src/js/**/*.*')
+      /*  .pipe(uglify())*/
         .pipe(gulp.dest('./dist/js'));
+
 });
 
 gulp.task('html', () => {
