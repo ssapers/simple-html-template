@@ -11,6 +11,7 @@ const env = process.env.NODE_ENV===''||process.env.NODE_ENV==='production';
 const uglify = require('gulp-uglify-es').default;
 const csso = require('gulp-csso');
 const gulpIf = require('gulp-if');
+const htmlmin = require('gulp-html-minifier');
 // Автоперезагрузка при изменении файлов в папке `dist`:
 // Принцип: меняем файлы в `/src`, они обрабатываются и переносятся в `dist` и срабатывает автоперезагрузка.
 // Это таск нужен только при локальной разработке.
@@ -55,6 +56,7 @@ gulp.task('html', () => {
     gulp.src('src/index.ejs')
     .pipe(ejs().on('error', gutil.log))
     .pipe(rename('index.html'))
+        .pipe(gulpIf(env,htmlmin({collapseWhitespace: true})))
         .pipe(gulp.dest('./dist'));
 });
 
