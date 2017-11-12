@@ -16,7 +16,7 @@
     <div class="header-content">
     <a href="#" class="logo-name__link"><img src="img/the_shop_logo.svg" alt="#" class="logo-name"></a>
     <a href="#" class="oggeto-logo__link"><img src="img/oggetto_logo.svg"  alt="#" class="oggeto-logo"></a>
-    <div class="number"><p>+7 (812) 2•12•85•06</p></div>
+    <div class="number"><p class="number_size">+7 (812) 2•12•85•06</p></div>
     </div>
 </header>
 
@@ -66,28 +66,28 @@
     </div>
 
 
-<div class="product">
-    <div class="product__photo" id="img"><img src="img/tshirt_white.jpg" alt="" class="product__photo product__photo_size"></div>
+<div class="product" id="property">
+    <div class="product__photo" ><img src="img/tshirt_white.jpg" alt="" class="product__photo product__photo_size" id="img"></div>
     <div class="product__name"><h1 class="product__name_size">Футболка Alien technology</h1>
         <p class="product__composition">Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</p>
         <h1 class="product__price">1500₽</h1>
         <form action="#" id="formProperty">
         <div class="product__size" id="size"><span class="product__size_text">Размер:</span></div>
-        <div class="product__format">
+        <div class="product__format" id="sizeList">
             <% const value = ['S','M','L']%>
             <%value.forEach(function(item){%>
-            <input type="button"  class="product__format_size" data-action="<%=item%>" value="<%=item%>">
+            <input type="button"  class="product__format_size" data-type="size" data-value="<%=item%>" value="<%=item%>">
             <%});%>
         </div>
     <div class="product__name_color" id="color"><span class="product__color_choose">Цвет:</span></div>
-        <div class="product-button">
+        <div class="product-button" id="colorList">
             <% const dataAction = ['white','yellow','green']%>
             <%dataAction.forEach(function(item,index){%>
             <input type="button" class="product-button__color
                 <%if (index == 0) {%>product-button__color_white<%}%>
                 <%if (index == 1) {%>product-button__color_yellow<%}%>
                 <%if (index == 2) {%>product-button__color_green<%}%>"
-                   data-action="<%=item%>" value=" ">
+                   data-type="color" data-value="<%=item%>" value=" ">
             <%});%>
         </div>
         <div class="product__buy"><button type="button" class="product__buy_size">Купить</button></div>
@@ -167,11 +167,13 @@
             <a href="" class="information__link"><img src="img/twitter.svg" alt="" class="information__twitter"></a>
             <a href="" class="information__link"><img src="img/instagram.svg" alt="" class="information__instagram"></a>
         </div>
+
     </div>
-    <hr>
-    <div class="information__footer"><p class="information__footer_text">2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.</p>
+
+    <div class="information__footer"> <hr>
+        <p class="information__footer_text">2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.</p>
         <p class="information__footer_text">Все права защищены.Доставка по всей России!</p></div>
 </section>
-<script src="js/scripts.js"></script>
+<script type="module" src="js/scripts.js"></script>
 </body>
 </html>

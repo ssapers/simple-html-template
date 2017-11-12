@@ -1,16 +1,28 @@
 /* eslint-disable no-unused-vars */
-const form = document.getElementById('formProperty');
-form.addEventListener('click', function (event) {
-    const action = event.target.getAttribute('data-action');
-    const size = document.getElementById('size');
-    const color = document.getElementById('color');
-    const img = document.getElementById('img');
-    if(action === 'S' || action === 'M' || action === 'L' ) {
-        size.innerHTML = '<span>Размер: <b>'+action+'</b></span> ';
 
+import PropertySelector from './property-selector.js';
+
+const Dispatcher = document.getElementById('property');
+
+new PropertySelector(document.getElementById('colorList'));
+new PropertySelector(document.getElementById('sizeList'));
+
+Dispatcher.addEventListener('property-selected', ev => {
+    const data = ev.detail;
+
+    if (data.type === 'color') {
+        changePicture(data.value);
     }
-    if(action === 'white' || action === 'yellow' || action === 'green'){
-        color.innerHTML = '<span>Цвет: <b>'+action+'</b></span> ';
-        img.innerHTML = '<img src="img/tshirt_'+action+'.jpg" class="product__photo_size">';
+    if (data.type === 'size') {
+        changePrice(data.value);
     }
 });
+
+function changePrice(value) {
+    document.getElementById('size').innerHTML = '<span>Размер: <b>'+value+'</b></span> ';
+}
+
+function changePicture(color) {
+    document.getElementById('color').innerHTML= '<span>Цвет: <b>'+ color +'</b></span>';
+    document.getElementById('img').src = 'img/tshirt_' + color + '.jpg';
+}
