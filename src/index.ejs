@@ -21,7 +21,8 @@
 </header>
 
 <section class="menu">
-    <div class="menu-content">
+    <div class="menu-content" id="menu-mobile">
+        <input type="button" class="menu-mobile__content" value="≡">
         <ul class="menu-list">
             <% const menu = ['LISP', 'OCaml', 'Javascript', 'Python', 'PHP']; %>
             <%menu.forEach(function (item,index) { %>
@@ -38,8 +39,8 @@
         </ul>
         <form action="#" id="searchForm">
         <div class="menu-search">
-            <input type="search" name="q" class="menu-search__field">
-            <input type="submit" value="" class="menu-search__icon">
+            <input type="search" name="q" class="menu-search__field" placeholder="Поиск по сайту">
+            <input type="submit" value="" class="menu-search__icon" >
         </div>
         </form>
     </div>
@@ -145,6 +146,7 @@
                 </ul>
             </div>
         </div>
+
         <div class="information-features">
             <div class="information-advantages">
                 <img src="img/delivery.svg" alt="" class="information-advantages__delivery">
@@ -161,7 +163,7 @@
                 <div class="information__text"><p class="information__text_size">акции и подарки за покупку</p></div>
             </div>
         </div>
-
+        <div class="number-mobile"><p class="number_size">+7 (812) 2•12•85•06</p></div>
         <div class="information__network">
             <a href="" class="information__link"><img src="img/facebook.svg" alt="" class="information__facebook"></a>
             <a href="" class="information__link"><img src="img/twitter.svg" alt="" class="information__twitter"></a>

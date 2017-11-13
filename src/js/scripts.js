@@ -1,5 +1,10 @@
 /* eslint-disable no-unused-vars */
+const menuElem = document.getElementById('menu-mobile');
+const titleElem = menuElem.querySelector('.menu-mobile__content');
 
+titleElem.onclick = function() {
+    menuElem.classList.toggle('menu-open');
+};
 import PropertySelector from './property-selector.js';
 
 const Dispatcher = document.getElementById('property');
