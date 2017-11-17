@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+
+
+<header class="header">
+    <div class="header-content">
+    <a href="#" class="logo-name__link"><img src="img/the_shop_logo.svg" alt="#" class="logo-name"></a>
+    <a href="#" class="oggeto-logo__link"><img src="img/oggetto_logo.svg"  alt="#" class="oggeto-logo"></a>
+    <div class="number"><p class="number_size">+7 (812) 2•12•85•06</p></div>
+    </div>
+</header>
+
+<section class="menu">
+    <div class="menu-content" id="menu-mobile">
+        <input type="button" class="menu-mobile__content" value="≡">
+        <ul class="menu-list">
+            <% const menu = ['LISP', 'OCaml', 'Javascript', 'Python', 'PHP']; %>
+            <%menu.forEach(function (item,index) { %>
+            <%if (index === 0) {%>
+            <li class="menu-list__item">
+                <a href="" class="menu-list__link menu-list__link_current"><%=item%></a></li>
+            <%}%>
+            <%if(index>0) {%>
+            <li class="menu-list__item">
+                <a href="#" class="menu-list__link"><%= item %></a>
+            </li>
+            <%}%>
+            <% }); %>
+        </ul>
+        <form action="#" id="searchForm">
+        <div class="menu-search">
+            <input type="search" name="q" class="menu-search__field" placeholder="Поиск по сайту">
+            <input type="submit" value="" class="menu-search__icon" >
+        </div>
+        </form>
+    </div>
+</section>
+
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs-list">
+            <% const breadcrumbs = ['LISP', 'Одежда', 'Футболки']; %>
+            <%breadcrumbs.forEach(function (item,index) { %>
+            <%if ((breadcrumbs.length-1) > index){%>
+            <li class="breadcrumbs-list__item">
+                <a href="#" class="breadcrumbs-list__link"><%= item %></a>
+                <% if(index < (breadcrumbs.length - 1)) { %>
+                <span>/</span>
+                <% } %>
+            </li>
+            <%}%>
+            <%if((breadcrumbs.length-1) === index){%>
+            <li class="breadcrumbs-list__item">
+                <a href="" class="breadcrumbs-list__link breadcrumbs-list__link_current"><%=item%></a></li>
+            <%}%>
+            <% }); %>
+        </ul>
+    </div>
+
+
+<div class="product" id="property">
+    <div class="product__photo" ><img src="img/tshirt_white.jpg" alt="" class="product__photo product__photo_size" id="img"></div>
+    <div class="product__name"><h1 class="product__name_size">Футболка Alien technology</h1>
+        <p class="product__composition">Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</p>
+        <h1 class="product__price">1500₽</h1>
+        <form action="#" id="formProperty">
+        <div class="product__size" id="size"><span class="product__size_text">Размер:</span></div>
+        <div class="product__format" id="sizeList">
+            <% const value = ['S','M','L']%>
+            <%value.forEach(function(item){%>
+            <input type="button"  class="product__format_size" data-type="size" data-value="<%=item%>" value="<%=item%>">
+            <%});%>
+        </div>
+    <div class="product__name_color" id="color"><span class="product__color_choose">Цвет:</span></div>
+        <div class="product-button" id="colorList">
+            <% const dataAction = ['white','yellow','green']%>
+            <%dataAction.forEach(function(item,index){%>
+            <input type="button" class="product-button__color
+                <%if (index == 0) {%>product-button__color_white<%}%>
+                <%if (index == 1) {%>product-button__color_yellow<%}%>
+                <%if (index == 2) {%>product-button__color_green<%}%>"
+                   data-type="color" data-value="<%=item%>" value=" ">
+            <%});%>
+        </div>
+        <div class="product__buy"><button type="button" class="product__buy_size">Купить</button></div>
+
+        <div class="product-desire">
+            <img src="img/heart-put.svg" alt="" class="desire__img">
+            <div class="product-desire"><a href="" class="desire__link">Отложить на потом</a></div>
+        </div>
+        </form>
+    </div>
+</div>
+
+<section class="footer">
+    <div class="information">
+        <div class="service-support">
+            <ul class="service-support__list"><li class="service-support__title">Сервис и поддержка</li>
+                    <% const informationService = ['Как сделать заказ', 'Возврат товара', 'Публичная оферта', 'Доставка']; %>
+                    <%informationService.forEach(function (item) { %>
+                    <li class="service-support__item">
+                        <a href="#" class="service-support__link"><%= item %></a>
+                    </li>
+                    <% }); %>
+                </ul>
+            <div class="service-support">
+            <ul class="service-support__list">
+                <% const informationSupport = ['Способы оплаты', 'Правила продажи', 'Возврат денежный средств', 'Вопросы и ответы']; %>
+                <%informationSupport.forEach(function (item,index) { %>
+                <li class="service-support__item
+                <%if (index == 0) {%>service-support__item_indent<%}%>">
+                    <a href="#" class="service-support__link"><%= item %></a>
+                </li>
+                <% }); %>
+            </ul>
+            </div>
+        </div>
+        <div class="information-company">
+            <ul class="company__list"><li class="company__title">О компании</li>
+                    <% const informationCompany = ['О нас', 'Контакты', 'Вакансии', 'Партнерам']; %>
+                    <%informationCompany.forEach(function (item) { %>
+                    <li class="company__item">
+                        <a href="#" class="company__link"><%= item %></a>
+                    </li>
+                    <% }); %>
+                </ul>
+
+            <div class="information-company">
+                <ul class="company__list company__list_retreat">
+                    <% const informationCompanyTwo = ['Сертификаты', 'Преимущества', 'Наши скидки']; %>
+                    <%informationCompanyTwo.forEach(function (item,index) { %>
+                    <li class="company__item
+                           <%if (index == 0) {%>company__item_retreat<%}%>">
+                        <a href="#" class="company__link"><%= item %></a>
+                    </li>
+                    <% }); %>
+                </ul>
+            </div>
+        </div>
+
+        <div class="information-features">
+            <div class="information-advantages">
+                <img src="img/delivery.svg" alt="" class="information-advantages__delivery">
+                <div class="information__text"><p class="information__text_size">бесплатная доставка от 4000 ₽</p></div>
+            </div>
+
+            <div class="information-heart">
+                <img src="img/heart.svg" alt="" class="information-advantages__heart">
+                <div class="information__text"><p class="information__text_size">пробники в подарок при каждой покупке</p></div>
+            </div>
+
+            <div class="information-stock">
+                <img src="img/cup.svg" alt="" class="information-advantages__stock">
+                <div class="information__text"><p class="information__text_size">акции и подарки за покупку</p></div>
+            </div>
+        </div>
+        <div class="number-mobile"><p class="number_size">+7 (812) 2•12•85•06</p></div>
+        <div class="information__network">
+            <a href="" class="information__link"><img src="img/facebook.svg" alt="" class="information__facebook"></a>
+            <a href="" class="information__link"><img src="img/twitter.svg" alt="" class="information__twitter"></a>
+            <a href="" class="information__link"><img src="img/instagram.svg" alt="" class="information__instagram"></a>
+        </div>
+
+    </div>
+
+    <div class="information__footer"> <hr>
+        <p class="information__footer_text">2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.</p>
+        <p class="information__footer_text">Все права защищены.Доставка по всей России!</p></div>
+</section>
+<script type="module" src="js/scripts.js"></script>
+</body>
+</html>
