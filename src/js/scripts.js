@@ -1,35 +1,33 @@
 /* eslint-disable no-unused-vars */
+const menuElem = document.getElementById('menu-mobile');
+const titleElem = menuElem.querySelector('.menu-mobile__content');
 
-const form = document.getElementById('formProperty');
-form.addEventListener('click', function (event) {
-    const action = event.target.getAttribute('data-action');
-    const size = document.getElementById('size');
-    const color = document.getElementById('color');
-    const img = document.getElementById('img');
-    if(action === 'S') {
-        size.innerHTML = '<span>Размер: <b>S</b></span> ';
+titleElem.onclick = function() {
+    menuElem.classList.toggle('menu-open');
+};
+import PropertySelector from './property-selector.js';
 
-    }
-    if(action === 'M') {
-        size.innerHTML = '<span>Размер: <b>M</b></span> ';
+const Dispatcher = document.getElementById('property');
 
-    }
-    if(action === 'L') {
-        size.innerHTML = '<span>Размер: <b>L</b></span> ';
-    }
-    if(action === 'white') {
-        color.innerHTML = '<span>Цвет: <b>White</b></span> ';
-        img.innerHTML = '<img src="img/tshirt_white.jpg">';
+new PropertySelector(document.getElementById('colorList'));
+new PropertySelector(document.getElementById('sizeList'));
 
-    }
-    if(action === 'yellow') {
-        color.innerHTML = '<span>Цвет: <b>Yellow</b></span> ';
-        img.innerHTML = '<img src="img/tshirt_yellow.jpg">';
+Dispatcher.addEventListener('property-selected', ev => {
+    const data = ev.detail;
 
+    if (data.type === 'color') {
+        changePicture(data.value);
     }
-    if(action === 'green') {
-        color.innerHTML = '<span>Цвет: <b>Green</b></span> ';
-        img.innerHTML = '<img src="img/tshirt_green.jpg">';
+    if (data.type === 'size') {
+        changePrice(data.value);
     }
 });
 
+function changePrice(value) {
+    document.getElementById('size').innerHTML = '<span>Размер: <b>'+value+'</b></span> ';
+}
+
+function changePicture(color) {
+    document.getElementById('color').innerHTML= '<span>Цвет: <b>'+ color +'</b></span>';
+    document.getElementById('img').src = 'img/tshirt_' + color + '.jpg';
+}
