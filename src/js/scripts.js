@@ -21,6 +21,7 @@ Dispatcher.addEventListener('property-selected', ev => {
     if (data.type === 'size') {
         changePrice(data.value);
     }
+
 });
 
 function changePrice(value) {
@@ -31,3 +32,4 @@ function changePicture(color) {
     document.getElementById('color').innerHTML= '<span>Цвет: <b>'+ color +'</b></span>';
     document.getElementById('img').src = 'img/tshirt_' + color + '.jpg';
 }
+
